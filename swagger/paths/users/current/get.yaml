@@ -1,0 +1,26 @@
+tags:
+  - Users
+summary: Get current user
+operationId: currentUserInfo
+description: Get current user info
+security:
+  - bearerAuth: []
+responses:
+  '200':
+    description: Current user with id
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            status:
+              type: integer
+              example: 200
+            message:
+              type: string
+              example: Successfully found contact with id 67b91abbb180078c4327247d!
+            data:
+              type: object
+              $ref: '../../../components/schemas/user.yaml'
+  '401':
+    $ref: '../../../components/responses/401.yaml'
