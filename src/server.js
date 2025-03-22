@@ -10,8 +10,6 @@ import { swaggerDocs } from './middlewares/swaggerDocs.js';
 
 const allowedOrigins = getEnvVar('ALLOWED_ORIGINS')?.split(',') || [];
 
-console.log(allowedOrigins);
-
 const PORT = +getEnvVar(ENV_VAR.MONGODB_PORT, 3000);
 
 export const setupServer = () => {
